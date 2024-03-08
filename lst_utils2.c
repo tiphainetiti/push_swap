@@ -1,0 +1,81 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   lst_utils2.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tiphainelay <tiphainelay@student.42.fr>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/21 16:53:32 by tlay              #+#    #+#             */
+/*   Updated: 2024/03/03 03:44:56 by tiphainelay      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "push_swap.h"
+
+int	my_lstsize(t_stack *stack)
+{
+	int	size;
+
+	if (!stack)
+		return (0);
+	size = 0;
+	while (stack)
+	{
+		stack = stack->next;
+		size++;
+	}
+	return (size);
+}
+
+t_stack	*my_lstlast(t_stack *stack)
+{
+	if (!stack)
+		return (NULL);
+	while (stack->next)
+		stack = stack->next;
+	return (stack);
+}
+
+// Find the minimum in a stack
+int	ft_min(t_stack *stack)
+{
+	int	i;
+
+	i = stack->value;
+	while (stack)
+	{
+		if (i > stack->value)
+			i = stack->value;
+		stack = stack->next;
+	}
+	return (i);
+}
+
+// Find the maximum in a stack
+int	ft_max(t_stack *stack)
+{
+	int	i;
+
+	i = stack->value;
+	while (stack)
+	{
+		if (i < stack->value)
+			i = stack->value;
+		stack = stack->next;
+	}
+	return (i);
+}
+
+// Find the index of a number in a stack
+int	ft_find_index(t_stack *stack, int nb)
+{
+	int	i;
+
+	i = 0;
+	while (stack->value != nb)
+	{
+		i++;
+		stack = stack->next;
+	}
+	return (i);
+}
