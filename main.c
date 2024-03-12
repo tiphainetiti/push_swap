@@ -6,7 +6,7 @@
 /*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:05:19 by tlay              #+#    #+#             */
-/*   Updated: 2024/03/07 18:58:08 by tlay             ###   ########.fr       */
+/*   Updated: 2024/03/12 17:40:08 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,9 @@
 //	}
 //	write(1, "\n", 1);
 //}
+// ft_print_stack(stack_a, "a AVANT :");
+// ft_print_stack(stack_a, "a apres ALGO");
+// ft_print_stack(stack_b, "b apres ALGO");
 
 int	main(int ac, char **av)
 {
@@ -41,10 +44,7 @@ int	main(int ac, char **av)
 	if (ac >= 2)
 	{
 		ft_stack_init(av, &stack_a);
-		// ft_print_stack(stack_a, "a AVANT :");
-		ft_algo(&stack_a, &stack_b);
-		// ft_print_stack(stack_a, "a apres ALGO");
-		// ft_print_stack(stack_b, "b apres ALGO");
+		ft_sort(&stack_a, &stack_b);
 	}
 	my_lstclear(&stack_a);
 	my_lstclear(&stack_b);

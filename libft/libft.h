@@ -6,13 +6,17 @@
 /*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 14:04:56 by tlay              #+#    #+#             */
-/*   Updated: 2024/01/29 14:59:33 by tlay             ###   ########.fr       */
+/*   Updated: 2024/03/12 15:09:11 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
+# include <fcntl.h>
 # include <limits.h>
 # include <stdarg.h>
 # include <stdint.h>
@@ -70,4 +74,5 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
+char				*get_next_line(int fd);
 #endif

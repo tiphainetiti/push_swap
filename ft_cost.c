@@ -6,12 +6,14 @@
 /*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 12:40:03 by tlay              #+#    #+#             */
-/*   Updated: 2024/03/07 18:54:01 by tlay             ###   ########.fr       */
+/*   Updated: 2024/03/12 17:56:26 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+// Parcourir la stack en calculant chaque combinaison de commandes
+// afin de trouver la moins chere
 int	ft_cheappest(t_stack *stack_a, t_stack *stack_b)
 {
 	t_stack	*tmp;
@@ -34,16 +36,13 @@ int	ft_cheappest(t_stack *stack_a, t_stack *stack_b)
 	return (cheappest);
 }
 
-// On a notre meilleure combinaison,
-// c'est le chiffre le plus bas que l'on trouve en tournant dans la
-// stack, donc en tournant dans la stack,
-// on identifie de quel cas il s 'agit pour l' appliquer
+// Identifier et appliquer la combinaison la moins chere
 void	ft_apply_case(t_stack **stack_a, t_stack **stack_b)
 {
 	t_stack	*tmp;
 	int		cheappest;
 
-	while (my_lstsize(*stack_a) > 3 && ft_check_sorted(*stack_a) == 1)
+	while (my_lstsize(*stack_a) > 3 && ft_check_sorted_a(*stack_a) == 1)
 	{
 		tmp = *stack_a;
 		cheappest = ft_cheappest(*stack_a, *stack_b);

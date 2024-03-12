@@ -6,13 +6,12 @@
 /*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 12:51:53 by tlay              #+#    #+#             */
-/*   Updated: 2024/03/07 17:45:32 by tlay             ###   ########.fr       */
+/*   Updated: 2024/03/12 17:46:22 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// Lorsque rotation dans le meme sens, prendre le plus grand des 2
 int	ft_case_rrarrb(t_stack *stack_a, t_stack *stack_b, int nb)
 {
 	int	i;

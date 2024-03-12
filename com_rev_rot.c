@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   com_rev_rot.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tiphainelay <tiphainelay@student.42.fr>    +#+  +:+       +#+        */
+/*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 15:59:51 by tlay              #+#    #+#             */
-/*   Updated: 2024/03/03 03:56:46 by tiphainelay      ###   ########.fr       */
+/*   Updated: 2024/03/12 17:45:21 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	ft_rrb(t_stack **stack_b, int j)
 		write(1, "rrb\n", 4);
 }
 
-// rrr
+// rrr : rra + rrb
 void	ft_rrr(t_stack **stack_a, t_stack **stack_b, int j)
 {
 	j = 1;
@@ -58,10 +58,3 @@ void	ft_rrr(t_stack **stack_a, t_stack **stack_b, int j)
 	ft_rrb(stack_b, j);
 	write(1, "rrr\n", 4);
 }
-
-// void	ft_test_a(t_stack **stack_a)
-// {
-// 	if (!*stack_a)
-// 		write(1, "nooo stack\n", 11);
-// 	*stack_a = (*stack_a)->next;
-// }

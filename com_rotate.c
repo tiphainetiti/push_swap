@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   com_rotate.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tiphainelay <tiphainelay@student.42.fr>    +#+  +:+       +#+        */
+/*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 17:47:35 by tlay              #+#    #+#             */
-/*   Updated: 2024/03/03 03:57:15 by tiphainelay      ###   ########.fr       */
+/*   Updated: 2024/03/12 17:45:33 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	ft_rb(t_stack **stack_b, int j)
 		write(1, "rb\n", 3);
 }
 
-// rr
+// rr : ra + rb
 void	ft_rr(t_stack **stack_a, t_stack **stack_b, int j)
 {
 	j = 1;

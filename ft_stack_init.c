@@ -12,6 +12,7 @@
 
 #include "push_swap.h"
 
+// Ajouter les arguments un a un + free l'ancien strjoin
 static char	*ft_add_av(char *all_av, char *av, char *tmp)
 {
 	char	*tmp2;
@@ -23,6 +24,7 @@ static char	*ft_add_av(char *all_av, char *av, char *tmp)
 	return (all_av);
 }
 
+// Lorsque qu'il n'y a qu'un argument ou un seul a ajouter
 static char	*ft_just_one_av(char *av, char *all_av, char *tmp)
 {
 	if (!all_av)
@@ -35,6 +37,7 @@ static char	*ft_just_one_av(char *av, char *all_av, char *tmp)
 	return (all_av);
 }
 
+// Rassembler tous les arguments en une chaine de caracteres
 static char	*ft_gather_av(char **av)
 {
 	char	*all_av;
@@ -60,6 +63,7 @@ static char	*ft_gather_av(char **av)
 	return (all_av);
 }
 
+// Initialisation de la stack
 void	ft_stack_init(char **av, t_stack **stack_a)
 {
 	char	*all_av;

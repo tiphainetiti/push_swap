@@ -43,6 +43,7 @@ SRC_FILES			= ft_atoi \
 					ft_strmapi \
 					ft_striteri \
 					ft_split \
+					get_next_line \
 
 OBJ_FILES			= $(addsuffix .o, ${SRC_FILES})
 

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/11 17:37:16 by tlay              #+#    #+#             */
-/*   Updated: 2024/01/25 14:57:43 by tlay             ###   ########.fr       */
+/*   Created: 2024/01/05 21:16:31 by tlay              #+#    #+#             */
+/*   Updated: 2024/03/12 15:08:40 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "libft.h"
 
 char	*update_buffer(int fd, char *buffer, char *remaining_buffer)
 {
@@ -30,6 +30,8 @@ char	*update_buffer(int fd, char *buffer, char *remaining_buffer)
 			remaining_buffer = ft_strdup("");
 		tmp = remaining_buffer;
 		remaining_buffer = ft_strjoin(tmp, buffer);
+		if (!remaining_buffer)
+			return (free(buffer), NULL);
 		free(tmp);
 		tmp = NULL;
 		if (ft_strchr(buffer, '\n'))
@@ -76,7 +78,7 @@ static char	*substract_of_buffer(char *actual_buffer, char *line)
 
 char	*get_next_line(int fd)
 {
-	static char	*remaining_buffer[MAX_FD];
+	static char	*remaining_buffer;
 	char		*buffer;
 	char		*line;
 
@@ -87,18 +89,18 @@ char	*get_next_line(int fd)
 	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0))
 	{
 		free(buffer);
-		free(remaining_buffer[fd]);
+		free(remaining_buffer);
 		buffer = NULL;
-		remaining_buffer[fd] = NULL;
+		remaining_buffer = NULL;
 		return (NULL);
 	}
-	buffer = update_buffer(fd, buffer, remaining_buffer[fd]);
+	buffer = update_buffer(fd, buffer, remaining_buffer);
 	if (!buffer)
 		return (free(buffer), NULL);
 	line = get_line(buffer);
 	if (!line)
 		return (NULL);
-	remaining_buffer[fd] = substract_of_buffer(buffer, line);
+	remaining_buffer = substract_of_buffer(buffer, line);
 	return (line);
 }
 
@@ -109,7 +111,7 @@ char	*get_next_line(int fd)
 //	int		fd;
 //	char	*line;
 
-//	fd = open("test1", O_RDONLY);
+//	fd = open("test2.txt", O_RDONLY);
 //	while (1)
 //	{
 //		line = get_next_line(fd);

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   com_swap.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tiphainelay <tiphainelay@student.42.fr>    +#+  +:+       +#+        */
+/*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 17:45:02 by tlay              #+#    #+#             */
-/*   Updated: 2024/03/03 03:56:15 by tiphainelay      ###   ########.fr       */
+/*   Updated: 2024/03/12 17:46:03 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// swap a : inverse les 2 premiers
+// swap a : inverse les 2 premiers node de a
 void	ft_sa(t_stack **stack_a, int j)
 {
 	t_stack	*first;
@@ -35,7 +35,7 @@ void	ft_sa(t_stack **stack_a, int j)
 		write(1, "sa\n", 3);
 }
 
-// swap b
+// swap b :  inverse les 2 premiers node de b
 void	ft_sb(t_stack **stack_b, int j)
 {
 	t_stack	*first;
@@ -58,7 +58,7 @@ void	ft_sb(t_stack **stack_b, int j)
 		write(1, "sb\n", 3);
 }
 
-// ss
+// ss : sa + sb
 void	ft_ss(t_stack **stack_a, t_stack **stack_b, int j)
 {
 	j = 1;

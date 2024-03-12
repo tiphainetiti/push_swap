@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   lst_utils2.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tiphainelay <tiphainelay@student.42.fr>    +#+  +:+       +#+        */
+/*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 16:53:32 by tlay              #+#    #+#             */
-/*   Updated: 2024/03/03 03:44:56 by tiphainelay      ###   ########.fr       */
+/*   Updated: 2024/03/12 17:52:30 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ t_stack	*my_lstlast(t_stack *stack)
 	return (stack);
 }
 
-// Find the minimum in a stack
+// Trouver la valeur du minimum dans la stack
 int	ft_min(t_stack *stack)
 {
 	int	i;
@@ -51,7 +51,7 @@ int	ft_min(t_stack *stack)
 	return (i);
 }
 
-// Find the maximum in a stack
+// Trouver la valeur du maximum dans la stack
 int	ft_max(t_stack *stack)
 {
 	int	i;
@@ -66,7 +66,7 @@ int	ft_max(t_stack *stack)
 	return (i);
 }
 
-// Find the index of a number in a stack
+// Trouver l'index d'un nombre dans la stack
 int	ft_find_index(t_stack *stack, int nb)
 {
 	int	i;

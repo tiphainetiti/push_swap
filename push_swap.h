@@ -6,14 +6,13 @@
 /*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:05:38 by tlay              #+#    #+#             */
-/*   Updated: 2024/03/08 17:03:28 by tlay             ###   ########.fr       */
+/*   Updated: 2024/03/12 17:40:16 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "get_next_line/get_next_line.h"
 # include "libft/libft.h"
 # include <stdio.h>
 
@@ -23,7 +22,7 @@ typedef struct s_stack
 	struct s_stack	*next;
 }					t_stack;
 
-void				ft_print_stack(t_stack *to_print, char *when);
+// void				ft_print_stack(t_stack *to_print, char *when);
 
 char				**my_split(char *s, char c);
 char				*my_strjoin(char *s1, char *s2);
@@ -88,13 +87,14 @@ void				ft_rrr(t_stack **stack_a, t_stack **stack_b, int j);
 void				ft_small_sort(t_stack **stack_a);
 
 // algo.c
-void				ft_algo(t_stack **stack_a, t_stack **stack_b);
+void				ft_sort(t_stack **stack_a, t_stack **stack_b);
 
 // algo_utils.c
 int					ft_med_index(t_stack *stack);
-void				ft_nb_on_topA(t_stack **stack_a, int nb);
-void				ft_nb_on_topB(t_stack **stack_b, int nb);
-int					ft_check_sorted(t_stack *stack_a);
+void				ft_nb_on_top_a(t_stack **stack_a, int nb);
+void				ft_nb_on_top_b(t_stack **stack_b, int nb);
+int					ft_check_sorted_a(t_stack *stack_a);
+int					ft_check_sorted_b(t_stack *stack_b);
 
 // ft_find_place.c
 int					ft_find_place_b(t_stack *stack_b, int nb);
@@ -119,12 +119,8 @@ int					ft_apply_rrarb(t_stack **stack_a, t_stack **stack_b,
 int					ft_apply_rarrb(t_stack **stack_a, t_stack **stack_b,
 						int cheap_node);
 
-// checker.c
-
 // checker_utils.c
-void				ft_line_s(t_stack *stack_a, t_stack *stack_b, char *line);
-void				ft_line_r(t_stack *stack_a, t_stack *stack_b, char *line);
-void				ft_line_rr(t_stack *stack_a, t_stack *stack_b, char *line);
-void				ft_line_p(t_stack *stack_a, t_stack *stack_b, char *line);
+void				ft_checker_error(t_stack **stack_a, t_stack **stack_b,
+						char *line);
 
 #endif

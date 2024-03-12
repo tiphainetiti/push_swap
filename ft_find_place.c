@@ -6,16 +6,13 @@
 /*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 02:00:30 by tlay              #+#    #+#             */
-/*   Updated: 2024/03/07 18:51:47 by tlay             ###   ########.fr       */
+/*   Updated: 2024/03/12 17:47:01 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 // Trouver l'index où push dans la stack_b : DECROISSANT
-// Si entre le 1er et le dernier
-// Si nouveau max ou min
-// Tant que pas compris entre node1 et node 2, i++
 int	ft_find_place_b(t_stack *stack_b, int nb)
 {
 	int		i;

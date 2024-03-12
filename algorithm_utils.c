@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   algo_utils.c                                       :+:      :+:    :+:   */
+/*   algorithm_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 16:12:14 by tiphainelay       #+#    #+#             */
-/*   Updated: 2024/03/07 19:06:47 by tlay             ###   ########.fr       */
+/*   Updated: 2024/03/12 17:41:24 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,8 @@ int	ft_med_index(t_stack *stack)
 	return (med);
 }
 
-// Mettre un nombre on top de la stack
-// L'index du nombre dans la stack_a
-// Tant que le 1er node n'est pas le nombre
-// Si nombre est au dessus de la mediane
-void	ft_nb_on_topA(t_stack **stack_a, int nb)
+// Mettre un nombre on top de la stack_a
+void	ft_nb_on_top_a(t_stack **stack_a, int nb)
 {
 	int	i;
 
@@ -39,7 +36,8 @@ void	ft_nb_on_topA(t_stack **stack_a, int nb)
 	}
 }
 
-void	ft_nb_on_topB(t_stack **stack_b, int nb)
+// Mettre un nombre on top de la stack_b
+void	ft_nb_on_top_b(t_stack **stack_b, int nb)
 {
 	int	i;
 
@@ -53,7 +51,8 @@ void	ft_nb_on_topB(t_stack **stack_b, int nb)
 	}
 }
 
-int	ft_check_sorted(t_stack *stack_a)
+// Checker si la stack_a est trie : ordre croissant
+int	ft_check_sorted_a(t_stack *stack_a)
 {
 	int	i;
 
@@ -68,7 +67,8 @@ int	ft_check_sorted(t_stack *stack_a)
 	return (0);
 }
 
-int	ft_check_sorted_B(t_stack *stack_b)
+// Checker si la stack_b est trie : ordre decroissant
+int	ft_check_sorted_b(t_stack *stack_b)
 {
 	int	prev_value;
 
