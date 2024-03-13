@@ -6,7 +6,7 @@
 /*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:05:38 by tlay              #+#    #+#             */
-/*   Updated: 2024/03/12 17:40:16 by tlay             ###   ########.fr       */
+/*   Updated: 2024/03/13 16:40:48 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,8 +74,8 @@ int					ft_find_index(t_stack *stack, int nb);
 void				ft_sa(t_stack **stack_a, int j);
 void				ft_sb(t_stack **stack_b, int j);
 void				ft_ss(t_stack **stack_a, t_stack **stack_b, int j);
-void				ft_pa(t_stack **stack_a, t_stack **stack_b);
-void				ft_pb(t_stack **stack_a, t_stack **stack_b);
+void				ft_pa(t_stack **stack_a, t_stack **stack_b, int j);
+void				ft_pb(t_stack **stack_a, t_stack **stack_b, int j);
 void				ft_ra(t_stack **stack_a, int j);
 void				ft_rb(t_stack **stack_b, int j);
 void				ft_rr(t_stack **stack_a, t_stack **stack_b, int j);

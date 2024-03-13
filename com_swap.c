@@ -6,7 +6,7 @@
 /*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 17:45:02 by tlay              #+#    #+#             */
-/*   Updated: 2024/03/12 17:46:03 by tlay             ###   ########.fr       */
+/*   Updated: 2024/03/13 16:40:30 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,8 @@ void	ft_sb(t_stack **stack_b, int j)
 // ss : sa + sb
 void	ft_ss(t_stack **stack_a, t_stack **stack_b, int j)
 {
-	j = 1;
 	ft_sa(stack_a, j);
 	ft_sb(stack_b, j);
-	write(1, "ss\n", 3);
+	if (j == 1)
+		write(1, "ss\n", 3);
 }

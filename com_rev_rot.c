@@ -6,7 +6,7 @@
 /*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 15:59:51 by tlay              #+#    #+#             */
-/*   Updated: 2024/03/12 17:45:21 by tlay             ###   ########.fr       */
+/*   Updated: 2024/03/13 16:47:06 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,8 @@ void	ft_rrb(t_stack **stack_b, int j)
 // rrr : rra + rrb
 void	ft_rrr(t_stack **stack_a, t_stack **stack_b, int j)
 {
-	j = 1;
 	ft_rra(stack_a, j);
 	ft_rrb(stack_b, j);
-	write(1, "rrr\n", 4);
+	if (j == 1)
+		write(1, "rrr\n", 4);
 }

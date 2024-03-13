@@ -6,7 +6,7 @@
 /*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 19:16:37 by tlay              #+#    #+#             */
-/*   Updated: 2024/03/12 17:56:59 by tlay             ###   ########.fr       */
+/*   Updated: 2024/03/13 16:46:45 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_push_b_to_a(t_stack **stack_a, t_stack **stack_b)
 	while ((*stack_b))
 	{
 		if (ft_find_place_a(*stack_a, (*stack_b)->value) == 0)
-			ft_pa(stack_a, stack_b);
+			ft_pa(stack_a, stack_b, 0);
 		else
 			ft_rra(stack_a, 0);
 	}
@@ -29,9 +29,9 @@ void	ft_push_b_to_a(t_stack **stack_a, t_stack **stack_b)
 void	ft_push_a_to_b(t_stack **stack_a, t_stack **stack_b)
 {
 	if (my_lstsize(*stack_a) > 3 && (ft_check_sorted_a(*stack_a) == 1))
-		ft_pb(stack_a, stack_b);
+		ft_pb(stack_a, stack_b, 0);
 	if (my_lstsize(*stack_a) > 3 && (ft_check_sorted_a(*stack_a) == 1))
-		ft_pb(stack_a, stack_b);
+		ft_pb(stack_a, stack_b, 0);
 	while (stack_a && my_lstsize(*stack_a) > 3
 		&& ft_check_sorted_a(*stack_a) == 1)
 		ft_apply_case(stack_a, stack_b);
