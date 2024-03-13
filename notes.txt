@@ -105,3 +105,6 @@ Suite : norminette, re check tout
 
 8 mars : push_swap OOOOOOOOOKKKKKK i think (re check + normi car pas save la bonne version)
 Suite : continuer bonus --> faire une fonction error
+
+13 mars : checker OK LOL
+incorporer strlen_zero dans parcing

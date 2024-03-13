@@ -63,6 +63,17 @@ static char	*ft_gather_av(char **av)
 	return (all_av);
 }
 
+// Gestion d'une chaine vide
+void	ft_empty_table(char *all_av, char **table)
+{
+	if (table[0] == NULL)
+	{
+		free(all_av);
+		ft_free(table);
+		exit(EXIT_FAILURE);
+	}
+}
+
 // Initialisation de la stack
 void	ft_stack_init(char **av, t_stack **stack_a)
 {
@@ -75,6 +86,7 @@ void	ft_stack_init(char **av, t_stack **stack_a)
 	i = 0;
 	all_av = ft_gather_av(av);
 	table = my_split(all_av, ' ');
+	ft_empty_table(all_av, table);
 	while (table[i])
 	{
 		if (ft_parsing(table[i]) == 0 && ft_check_doubles(*stack_a,
