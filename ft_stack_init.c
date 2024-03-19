@@ -66,10 +66,12 @@ static char	*ft_gather_av(char **av)
 // Gestion d'une chaine vide
 void	ft_empty_table(char *all_av, char **table)
 {
+	int	i;
+
+	i = 0;
 	if (table[0] == NULL)
 	{
-		free(all_av);
-		ft_free(table);
+		ft_error_free(all_av, table);
 		exit(EXIT_FAILURE);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 17:45:58 by tlay              #+#    #+#             */
-/*   Updated: 2024/03/13 16:40:00 by tlay             ###   ########.fr       */
+/*   Updated: 2024/03/18 14:06:45 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_pa(t_stack **stack_a, t_stack **stack_b, int j)
 {
 	t_stack	*tmp;
 
-	if (!stack_b)
+	if (!*stack_b)
 		return ;
 	tmp = *stack_b;
 	*stack_b = (*stack_b)->next;

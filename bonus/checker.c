@@ -6,7 +6,7 @@
 /*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 16:14:53 by tlay              #+#    #+#             */
-/*   Updated: 2024/03/13 16:42:27 by tlay             ###   ########.fr       */
+/*   Updated: 2024/03/18 14:03:24 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,10 @@ int	main(int ac, char **av)
 	(void)ac;
 	stack_a = NULL;
 	stack_b = NULL;
-	ft_stack_init(av, &stack_a);
+	if (ac >= 2)
+		ft_stack_init(av, &stack_a);
+	else if (ac < 2)
+		return (0);
 	line = get_next_line(0);
 	if (!line && (ft_check_sorted_a(stack_a) == 1))
 		write(1, "KO\n", 3);

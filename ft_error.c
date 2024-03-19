@@ -6,7 +6,7 @@
 /*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 17:32:22 by tlay              #+#    #+#             */
-/*   Updated: 2024/03/12 10:29:43 by tlay             ###   ########.fr       */
+/*   Updated: 2024/03/14 18:59:33 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,11 @@
 void	ft_error(t_stack *stack_a, char *all_av, char **table)
 {
 	if (!stack_a)
-	{
-		free(all_av);
-		ft_free(table);
-		write(2, "Error\n", 6);
-	}
+		ft_error_free(all_av, table);
 	else
 	{
 		my_lstclear(&stack_a);
-		free(all_av);
-		ft_free(table);
-		write(2, "Error\n", 6);
+		ft_error_free(all_av, table);
 	}
 	exit(EXIT_FAILURE);
 }
@@ -41,4 +35,11 @@ void	ft_free(char **table)
 		i++;
 	}
 	free(table);
+}
+
+void	ft_error_free(char *all_av, char **table)
+{
+	free(all_av);
+	ft_free(table);
+	write(2, "Error\n", 6);
 }

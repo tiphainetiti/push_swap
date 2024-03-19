@@ -6,13 +6,13 @@
 /*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:05:19 by tlay              #+#    #+#             */
-/*   Updated: 2024/03/13 15:56:24 by tlay             ###   ########.fr       */
+/*   Updated: 2024/03/14 19:02:23 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// Afficher ma stack
+//// Afficher ma stack
 // void	ft_print_stack(t_stack *to_print, char *when)
 //{
 //	t_stack	*stack;
@@ -29,9 +29,9 @@
 //	}
 //	write(1, "\n", 1);
 //}
-// ft_print_stack(stack_a, "a apres ALGO");
 // ft_print_stack(stack_b, "b apres ALGO");
 // ft_print_stack(stack_a, "a AVANT :");
+// ft_print_stack(stack_a, "a apres ALGO");
 
 int	main(int ac, char **av)
 {
@@ -40,7 +40,6 @@ int	main(int ac, char **av)
 
 	stack_a = NULL;
 	stack_b = NULL;
-	(void)av;
 	if (ac >= 2)
 	{
 		ft_stack_init(av, &stack_a);

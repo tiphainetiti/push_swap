@@ -6,7 +6,7 @@
 /*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:05:38 by tlay              #+#    #+#             */
-/*   Updated: 2024/03/13 16:40:48 by tlay             ###   ########.fr       */
+/*   Updated: 2024/03/14 18:40:21 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ unsigned long long	ft_size_ull(unsigned long long nb);
 // ft_error.c
 void				ft_error(t_stack *stack_a, char *all_av, char **table);
 void				ft_free(char **table);
+void				ft_error_free(char *all_av, char **table);
 
 // lst_utils1.c
 t_stack				*my_lstnew(int value);
