@@ -6,11 +6,11 @@
 /*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 17:45:58 by tlay              #+#    #+#             */
-/*   Updated: 2024/03/18 14:06:45 by tlay             ###   ########.fr       */
+/*   Updated: 2024/08/05 22:11:58 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 // push a : prend b met au dessus de a
 void	ft_pa(t_stack **stack_a, t_stack **stack_b, int j)

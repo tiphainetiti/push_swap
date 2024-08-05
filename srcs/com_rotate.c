@@ -6,11 +6,11 @@
 /*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 17:47:35 by tlay              #+#    #+#             */
-/*   Updated: 2024/03/13 16:40:15 by tlay             ###   ########.fr       */
+/*   Updated: 2024/08/05 22:11:58 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 // rotate a : Decale vers le haut, le premier devient le dernier
 void	ft_ra(t_stack **stack_a, int j)

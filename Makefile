@@ -17,7 +17,8 @@ NAME				= push_swap
 CFLAGS				= -Wall -Werror -Wextra -g3
 CC					= cc
 LIBFT				= libft
-BONUS				= checker
+BUILD				= objs/
+BONUS_EXEC			= checker
 
 
 #################################################
@@ -49,14 +50,22 @@ SRC_FILES_2			= 	ft_stack_init \
 						algorithm_utils \
 
 
-OBJ_FILES_1			= $(addsuffix .o, ${SRC_FILES_1})
-OBJ_FILES_2			= $(addsuffix .o, ${SRC_FILES_2})
+SRC_1			= 	$(addprefix srcs/, $(SRC_FILES_1))
+SRC_2			= 	$(addprefix srcs/, $(SRC_FILES_2))
 
-SRC_BONUS			= bonus/checker \
-						bonus/checker_utils \
-						
 
-OBJ_BONUS			= $(addsuffix .o, ${SRC_BONUS})
+OBJ_FILES_1		= $(addprefix $(BUILD), $(addsuffix .o, $(SRC_FILES_1)))
+OBJ_FILES_2		= $(addprefix $(BUILD), $(addsuffix .o, $(SRC_FILES_2)))
+
+
+SRC_BONUS			= checker \
+						checker_utils \
+
+
+BONUS			= 	$(addprefix bonus/, $(SRC_BONUS))
+
+
+OBJ_BONUS		= $(addprefix $(BUILD), $(addsuffix .o, $(SRC_BONUS)))
 
 #################################################
 ## RULES
@@ -65,13 +74,21 @@ ${NAME} : ${OBJ_FILES_1} ${OBJ_FILES_2}
 		@make --silent -C $(LIBFT)
 		@cp $(LIBFT)/libft.a ${NAME}
 		@${CC} ${CFLAGS} -o ${NAME} ${OBJ_FILES_1} ${OBJ_FILES_2} -L $(LIBFT) -lft
-		@echo "$(GREEN)Compilation terminée!$(END) "
+		@echo "$(GREEN)Compilation terminée! 👍$(END) "
 
-${BONUS} : ${OBJ_BONUS} ${OBJ_FILES_2}
+${BONUS_EXEC} : ${OBJ_BONUS} ${OBJ_FILES_2}
 		@make --silent -C $(LIBFT)
-		@cp $(LIBFT)/libft.a ${BONUS}
-		@${CC} ${CFLAGS} -o ${BONUS} ${OBJ_BONUS} ${OBJ_FILES_2} -L $(LIBFT) -lft
-		@echo "$(GREEN)Compilation de la version bonus terminée!$(END) "
+		@cp $(LIBFT)/libft.a ${BONUS_EXEC}
+		@${CC} ${CFLAGS} -o ${BONUS_EXEC} ${OBJ_BONUS} ${OBJ_FILES_2} -L $(LIBFT) -lft
+		@echo "$(GREEN)Compilation de la version bonus terminée! 👍$(END) "
+
+objs/%.o: srcs/%.c
+	@mkdir -p ${BUILD}
+	@${CC} ${CFLAGS} -c $< -o $@
+
+objs/%.o: bonus/%.c
+	@mkdir -p ${BUILD}
+	@${CC} ${CFLAGS} -c $< -o $@
 
 all : ${NAME}
 
@@ -79,20 +96,21 @@ all : ${NAME}
 		@${CC} ${CFLAGS} -c $< -o $@
 
 clean :
-		@rm -f *.o
+		@rm -f ${BUILD}/*.o
 		@rm -f bonus/*.o
 		@rm -f bonus/libft.a
 		@make clean --silent -C $(LIBFT)
 		clear
-		@echo "$(CYAN)C'est tout propre !$(END)"
+		@echo "$(CYAN)All clean !$(END)"
 
 fclean : clean
 		@rm -f ${NAME}
-		@rm -f ${BONUS}
+		@rm -f ${BONUS_EXEC}
+		@rm -rf ${BUILD}
 		@make fclean --silent -C $(LIBFT)
 
 re : fclean all
 
-bonus : ${BONUS}
+bonus : ${BONUS_EXEC}
 
 .PHONY : all clean fclean re bonus

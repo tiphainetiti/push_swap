@@ -6,11 +6,11 @@
 /*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 18:26:36 by tlay              #+#    #+#             */
-/*   Updated: 2024/02/07 16:28:59 by tlay             ###   ########.fr       */
+/*   Updated: 2024/08/05 22:11:58 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 static int	ft_count_word(char *s, char c)
 {

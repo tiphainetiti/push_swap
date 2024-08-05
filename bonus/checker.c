@@ -6,11 +6,11 @@
 /*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 16:14:53 by tlay              #+#    #+#             */
-/*   Updated: 2024/03/18 14:03:24 by tlay             ###   ########.fr       */
+/*   Updated: 2024/08/05 22:13:20 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
 void	ft_check_sub(t_stack **stack_a, t_stack **stack_b, char *line)
 {

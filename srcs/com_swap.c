@@ -6,11 +6,11 @@
 /*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 17:45:02 by tlay              #+#    #+#             */
-/*   Updated: 2024/03/13 16:40:30 by tlay             ###   ########.fr       */
+/*   Updated: 2024/08/05 22:11:58 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 // swap a : inverse les 2 premiers node de a
 void	ft_sa(t_stack **stack_a, int j)

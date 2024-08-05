@@ -1,45 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atol.c                                          :+:      :+:    :+:   */
+/*   ft_atoull.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/20 15:30:27 by tlay              #+#    #+#             */
-/*   Updated: 2024/02/20 17:43:26 by tlay             ###   ########.fr       */
+/*   Created: 2024/02/19 19:45:03 by tlay              #+#    #+#             */
+/*   Updated: 2024/08/05 22:11:58 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
-long	ft_atol(char *str)
+unsigned long long	ft_atoull(char *str)
 {
-	int		i;
-	int		sign;
-	long	result;
+	int					i;
+	unsigned long long	result;
 
 	i = 0;
-	sign = 1;
 	result = 0;
 	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
 		i++;
-	if (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-			sign *= -1;
+	if (str[i] == '+')
 		i++;
-	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
+		if (result > ULLONG_MAX / 10 || (result == ULLONG_MAX / 10
+				&& (unsigned long long)(str[i] - '0') > ULLONG_MAX % 10))
+			return (ULLONG_MAX);
 		result *= 10;
 		result += str[i] - '0';
 		i++;
 	}
-	result *= sign;
 	return (result);
 }
 
-long	ft_size_int(long nb)
+unsigned long long	ft_size_ull(unsigned long long nb)
 {
 	int	size;
 

@@ -6,11 +6,11 @@
 /*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 15:59:51 by tlay              #+#    #+#             */
-/*   Updated: 2024/03/13 16:47:06 by tlay             ###   ########.fr       */
+/*   Updated: 2024/08/05 22:11:58 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 // reverse rotate a : Decale vers le bas, le dernier devient le premier
 void	ft_rra(t_stack **stack_a, int j)

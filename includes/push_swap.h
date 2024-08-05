@@ -6,14 +6,14 @@
 /*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:05:38 by tlay              #+#    #+#             */
-/*   Updated: 2024/03/14 18:40:21 by tlay             ###   ########.fr       */
+/*   Updated: 2024/08/05 22:12:10 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "libft/libft.h"
+# include "../libft/libft.h"
 # include <stdio.h>
 
 typedef struct s_stack

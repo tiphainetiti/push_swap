@@ -6,11 +6,11 @@
 /*   By: tlay <tlay@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 02:00:30 by tlay              #+#    #+#             */
-/*   Updated: 2024/03/12 17:47:01 by tlay             ###   ########.fr       */
+/*   Updated: 2024/08/05 22:11:58 by tlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 // Trouver l'index où push dans la stack_b : DECROISSANT
 int	ft_find_place_b(t_stack *stack_b, int nb)

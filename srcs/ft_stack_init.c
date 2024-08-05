@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 // Ajouter les arguments un a un + free l'ancien strjoin
 static char	*ft_add_av(char *all_av, char *av, char *tmp)
